@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soma</title>
+    <style>
+        body{
+            font: normal 15pt Arial;
+        }
+        input#r{
+            margin-top: 10px;
+            background-color: lightseagreen;
+        }
+        button{
+            background-color: lightcoral;
+            color: white;
+        }
+        div{
+            font: bolder 14pt Arial;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Soma de valores</h1>
+   <input type="text" id="num1"> +
+   <input type="text" id="num2">
+   <button id="sun">Somar</button>
+   <div>Resultado: <input type="text" id="r"></div> 
+  
+   <script>
+    var num1 = document.getElementById("num1")
+    var num2 = document.getElementById("num2")
+    var btn = document.getElementById("sun")
+    var res = document.getElementById("r")
+    
+    btn.addEventListener("click", function(){
+        res.value =Number(num1.value)+Number(num2.value)
+    })
+   </script>
+</body>
+</html>
