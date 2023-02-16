@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sequecias</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Qual a sua velocidade: <input type="number" name="vel" id="vel">km/h
+    <button id="ver">Verificar</button>
+   <div id="resu">
+    
+</div>
+    
+    <script>
+        var multa = document.getElementById('vel')
+        var verificar = document.getElementById('ver')
+        var resultado = document.getElementById('resu')
+        verificar.addEventListener('click',function(){
+         var ves  = Number(multa.value)
+            if(ves > 60){
+                resultado.innerHTML=`Velocidade acima de 60km/h, multado sua
+                velocidade atual é: <strong>${ves}</strong>km/h`
+            }else{
+                resultado.innerHTML='velocidade permitida'
+            }
+        })
+    </script>
+</body>
+</html>

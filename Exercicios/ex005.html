@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <style>
+        body{
+            font: normal 16pt Arial;
+        }
+        div#area{
+            background-color: greenyellow;
+            color: blue;
+            height: 200px;
+            width: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+        button{
+            background-color: gold;
+            font-size: 11pt;
+            border: 1px solid black;
+        }
+        input#res{
+            margin-top: 15px;
+            background-color: gray;
+            color: white;
+            border: none;
+            font: bolder 13pt Arial;
+            width: 150px
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste 1</h1>
+    <div id="area">interaja....</div><br>
+    
+    <h1>Somando Valores</h1>
+    <input type="text" id="num1"> +
+    <input type="text"  id="num2">
+    <button id="btn">Somar</button>
+    <div>Resultado: <input type="text" id="res"></div>
+
+    <script>
+        // configurações de caixa area
+        var a = document.querySelector('div#area')
+        a.addEventListener('click', function(){
+            a.style.background='blue'
+            a.style.color='white'
+            this.innerText="clicou!"
+        })
+        a.addEventListener('mouseenter',function(){
+            a.innerHTML="<strong>Entrou!</strong>"
+            a.style.color='red'
+        })
+        a.addEventListener('mouseout',function(){
+            this.innerText="Saiu"
+            this.style.color='black'
+            this.style.background='greenyellow'
+        })
+        // configurações de soma
+        var n1 = document.getElementById('num1')
+        var n2 = document.getElementById('num2')
+        var btn = document.querySelector('button#btn')
+        var r = document.getElementById('res')
+        btn.addEventListener('click', function(){
+            r.value = Number(num1.value)+Number(num2.value)
+        })
+    </script>
+</body>
+</html>
