@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Idade</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header><h1>Verificador de Idade</h1></header>
+    <section>
+        <div>
+            <p>Nasceu em que ano: <input type="text" id="num"></p>
+            <p>Sexo: <input type="radio" name="sexo" id="mas" checked>
+                <label for="mas">Masculino</label>
+            <input type="radio" name="sexo" id="fem">
+            <label for="fem">Feminino</label>
+            </p>
+            <p><button id="btn">Enviar</button></p>
+        </div>
+        <div id="res">
+
+        </div>
+</section>
+<footer>&copy; Ayrton Lopes</footer>
+    <script src="tela.js"></script>
 </body>
 </html>
