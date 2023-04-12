@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quadro</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+    
+    <script>
+        function desenhaquadrado(x,y,tamanho, cor){
+            var desenho =  document.querySelector('canvas')
+            var quadrado = desenho.getContext('2d')
+            quadrado.fillStyle = cor
+            quadrado.beginPath()
+            quadrado.fillRect(x,y,tamanho,tamanho)
+            quadrado.strokeStyle = 'black'
+            quadrado.strokeRect(x,y,tamanho,tamanho)
+            quadrado.fill()
+        }
+
+    
+        function desenhaTexto(texto, x , y) {
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.font='20px Georgia';
+    pincel.fillStyle='black';
+    pincel.fillText(texto, x, y); 
+     
+}
+
+        desenhaTexto("Qual é a fração?", 50, 30);
+        var y = 50 
+        desenhaquadrado(50,y,100,'red')
+        desenhaquadrado(150,y,100,'red')
+        desenhaquadrado(250,y,100)
+        desenhaquadrado(350,y,100,'yellow')
+
+    </script>
+</body>
+</html>
